@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JPreeceDev.com</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+
+        <!-- top navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://jpreecedev.com">JPreeceDev.com</a>
+                </div>
+                <a href="https://github.com/jpreecedev" class="pull-right"><img src="https://jpreecedev.files.wordpress.com/2014/03/github4848_thumb.png?w=48" alt="GitHub" width="48" height="48" class="github" /></a>
+            </div>
+        </div>
+
+        <div class="container narrow">
+            <div class="row">
+
+                <!-- main area -->
+                <div>
+                    <h2 class="text-center">RESTful web service using WCF</h2>
+                    <form role="form">
+                        <div class="form-group has-feedback">
+                            <label for="blogPostTitle">Blog post title</label>
+                            <input type="text" class="form-control" id="blogPostTitle" data-bind="value: title" required>
+                            <span class="form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label for="blogPostUrl">Blog post Url</label>
+                            <input type="text" class="form-control" id="blogPostUrl" name="blogPostUrl" data-bind="value: url" required>
+                            <span class="form-control-feedback"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" data-bind="click: add">Submit</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                    </form>
+                </div>
+            </div><!--/.row-->
+
+            <div class="row">
+                
+                <h2 class="text-center">Existing blog posts</h2>
+                <table class="table table-striped">
+                    <tbody data-bind="foreach: blogPosts">
+                        <tr>
+                            <td>
+                                <a data-bind="attr: { href: url }"><span data-bind="text: title"></span></a>
+                            </td>
+                            <td>
+                                <a href="#" data-bind="click: $parent.edit">Edit</a>&nbsp;<a href="#" data-bind="click: $parent.delete">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div><!--/.container-->
+    </div><!--/.page-container-->
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/knockout-3.1.0.js"></script>
+    <script src="Scripts/IndexViewModel.js"></script>
+</body>
+</html>

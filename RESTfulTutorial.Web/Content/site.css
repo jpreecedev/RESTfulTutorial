@@ -1,0 +1,26 @@
+﻿body {
+    padding-top: 51px;
+    background-color: #fff;
+}
+
+.text-center {
+    padding-top: 20px;
+}
+
+form[role='form'] {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input, select, textarea {
+    margin-bottom: 5px;
+}
+
+.github {
+	padding: 4px;
+}
+
+.narrow {
+    max-width: 600px;
+}
